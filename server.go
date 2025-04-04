@@ -7,8 +7,10 @@ import (
 )
 
 func main() {
-	fmt.Printf("Starting server at port 8080\n")
-	if err := http.ListenAndServe(":8080", nil); err != nil {
+	fmt.Println("Starting server at port 80")
+
+	err := http.ListenAndServe(":80", nil)
+	if err != nil {
 		log.Fatal(err)
 	}
 }
